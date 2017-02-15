@@ -1,11 +1,11 @@
 <?php
 
-namespace Addshore\Psr\Cache\MediaWiki\BagOStuff;
+namespace Addshore\Psr\Cache\MWBagOStuffAdapter;
 
 use DateInterval;
 use DateTime;
 use DateTimeInterface;
-use InvalidArgumentException;
+use Psr\Cache\InvalidArgumentException;
 use Psr\Cache\CacheItemInterface;
 
 class BagOStuffPsrCacheItem implements CacheItemInterface {
