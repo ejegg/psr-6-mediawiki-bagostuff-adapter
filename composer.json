@@ -1,5 +1,5 @@
 {
-  "name": "addshore/psr-6-mediawiki-badostuff-adapter",
+  "name": "addshore/psr-6-mediawiki-bagostuff-adapter",
   "type": "library",
   "description": "A MediaWiki BagOStuff PSR-6 adapter library",
   "keywords": ["Mediawiki", "Cache"],
