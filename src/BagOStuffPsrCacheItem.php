@@ -1,11 +1,10 @@
 <?php
 
-namespace Addshore\Psr\Cache\MediaWiki\BagOStuff;
+namespace Addshore\Psr\Cache\MWBagOStuffAdapter;
 
 use DateInterval;
 use DateTime;
 use DateTimeInterface;
-use InvalidArgumentException;
 use Psr\Cache\CacheItemInterface;
 
 class BagOStuffPsrCacheItem implements CacheItemInterface {
@@ -147,7 +146,9 @@ class BagOStuffPsrCacheItem implements CacheItemInterface {
 		} elseif ( (int)$time == $time ) {
 			$interval = new DateInterval( 'PT' . $time . 'S' );
 		} else {
-			throw new InvalidArgumentException( sprintf( 'Invalid $time "%s"', gettype( $time ) ) );
+			throw new BagOStuffPsrCacheInvalidArgumentException(
+				sprintf( 'Invalid $time "%s"', gettype( $time ) )
+			);
 		}
 		$this->expiration = new DateTime();
 		$this->expiration->add( $interval );

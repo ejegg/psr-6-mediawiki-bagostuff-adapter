@@ -2,7 +2,6 @@
 
 namespace Addshore\Psr\Cache\MWBagOStuffAdapter;
 
-use Addshore\Psr\Cache\MediaWiki\BagOStuff\BagOStuffPsrCacheItem;
 use DateTimeInterface;
 use Psr\Cache\CacheItemInterface;
 use Psr\Cache\CacheItemPoolInterface;
